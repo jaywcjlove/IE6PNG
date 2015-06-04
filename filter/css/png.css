@@ -1,0 +1,15 @@
+
+#pics{
+    margin:72px auto;
+    width:334px;
+    height:332px;
+    border: 1px solid red;
+
+
+
+    background:url(../img/jslite.png) no-repeat;
+    /*以下为IE6设置PNG透明代码*/
+    _background:none;
+    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="img/jslite.png");
+}
+

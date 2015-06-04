@@ -1,0 +1,11 @@
+img,div,#pics{behavior:url(css/iepngfix.htc);}
+#pics{
+    margin:72px auto;
+    width:334px;
+    height:332px;
+    border: 1px solid red;
+
+
+    background:url(../img/jslite.png) repeat-x;
+}
+
