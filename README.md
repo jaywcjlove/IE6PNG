@@ -52,6 +52,8 @@ http://www.w3cfuns.com/thread-297-1-1.html
 
 ### 思路：
 引入刚js文件，由于此js只有使用IE6时才有用，所以为了让我们的页面更加高效的执行，我们可以将上方代码修改如下，只有IE6的时候才调用执行此JavaScript：
+
+
 ```js
 <!--[if lte IE 6]> 
 <script type="text/javascript" src="js/DD_belatedPNG.js"></script> 
@@ -60,11 +62,15 @@ http://www.w3cfuns.com/thread-297-1-1.html
 </script>
 <![endif]-->
 ```
+
+
 ```html
  <div id="pics">
     dsds<br><br><br><br><br><br><br>
  </div>
 ```
+
+
 ```css
 #pics{background:url(img/jslite.png) repeat-x;}
 ```
@@ -73,12 +79,14 @@ http://www.w3cfuns.com/thread-297-1-1.html
 1. 如果为链接和链接的hover设置透明，那么您按照下方这么来写，在部分版本里面可以不用加入:hover直接写选择器即可，但是为了保险，建议咱们还是加上:hover：
  `DD_belatedPNG.fix("#links,#link:hover");`
 2. 如果页面中存在很多png，`DD_belatedPNG.fix();`函数的参数岂不是很长？我们可以使用这种写法：`DD_belatedPNG.fix(".pngFix,.pngFix:hover");`,使用上述的写法，我们的html中只需要在相对应的标签上加入`class="pngFix"`就行了，如果有多个类样式，按照平时的多个类样式的写法即可`class="abc cbc pngFix"`. 使用此方法的时候，我们每次都要加载两个js文件或者写两个<script>标签才行，这样不太好，http请求会增多，那么我们可以打开DD_belatedPNG.js文件，在尾部加入如下代码即可：
+
+
 ```js
- window.onload = function()
-{
+window.onload = function(){
    DD_belatedPNG.fix(".pngFix,.pngFix:hover");
 }
 ```
+
 这样我们只需要引入此JS，在需要透明的标签上加入`class="pngFix"`即可，简单 · 方便 · 快捷！
 
 
