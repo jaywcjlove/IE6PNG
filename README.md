@@ -132,7 +132,7 @@ window.onload = function(){
 > 虽说是纯CSS解决方案，但是也使用了JavaScript来运算，只不过是将脚本写到了CSS文件中，遗憾的是，此方案只支持img标签，对背景图片无效。
 
 
-在需要设置透明的样式中加入下方代码，其中蓝色标注代码为刚才下载的透明图片，路径同样还是相对于HTML文件的位置 （不相对于CSS文件！）：
+在需要设置透明的样式中加入下方代码，下面 `this.src = "images/blank.gif"` ， `images/blank.gif` 路径同样还是相对于HTML文件的位置 （不相对于CSS文件！）
 
 ```css
 img{
